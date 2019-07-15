@@ -9,7 +9,7 @@ const { Header, Footer, Content } = Layout;
 const MainViews = () => {
   return (
     <Layout>
-      <Header style={{ backgroundColor: "white", borderBottom: "1px solid rgb(233,233,233)" }} >
+      <Header style={{ backgroundColor: "white", borderBottom: "1px solid rgb(233,233,233)", padding:'0 10%' }} >
         <MainTop categoryList={["트레바리 알아보기", "멤버십 신청", "독서모임", "이벤트","채용공고", "로그인" ]} />
       </Header>
       <Content>

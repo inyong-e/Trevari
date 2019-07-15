@@ -13,7 +13,7 @@ const MainTop: React.SFC<Props> = ({ categoryList }) => {
   
   return (
     <div>
-      <img src={require("../../../resource/logo.png")} style={{ height: "22px", marginLeft: "10%", cursor: "pointer" }} />
+      <img src={require("../../../resource/logo.png")} style={{ height: "22px", cursor: "pointer" }} />
       <div style={{ float: "right" }}>{categorys}</div>
     </div>
     
