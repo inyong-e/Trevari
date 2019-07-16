@@ -6,7 +6,7 @@ interface Props {
 
 const MainTop: React.SFC<Props> = ({ categoryList }) => {
   const categorys = categoryList.map(category => (
-    <div style={{ padding: "0 10px", float: "left", color: "rgb(130,130,130)" }} >
+    <div style={{ margin: "0 10px", float: "left", color: "rgb(130,130,130)", cursor:'pointer'}} >
       {category}
     </div>
   ));

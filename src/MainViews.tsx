@@ -2,6 +2,7 @@ import * as React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
 import MeetingsPage from "./pages/MeetingsPage";
 import MainTop from './components/Common/MainTop';
+import MainFooter from './components/Common/MainFooter';
 import { Layout } from "antd";
 import "antd/dist/antd.css";
 
@@ -18,7 +19,7 @@ const MainViews = () => {
           <Route exact path="/events" component={MeetingsPage} />
         </BrowserRouter>
       </Content>
-      <Footer>Footer</Footer>
+      <Footer><MainFooter /></Footer>
     </Layout>
   );
 };
