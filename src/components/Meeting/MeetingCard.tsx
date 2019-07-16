@@ -7,9 +7,8 @@ interface Props{
 }
 
 export const MeetingCard:React.SFC<Props> = ({CardDesc}) => (
-  <Card style={{width:'35%', border:0}}>
-
-    <div style={{ height:'180px', marginBottom:'10px'}}>
+  <Card style={{border:0}}>
+    <div style={{ height:'180px', marginBottom:'5px'}}>
       <img src='https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png' style={{width:'100%',height:'100%'}}/>
     </div>
 

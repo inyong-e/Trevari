@@ -6,12 +6,10 @@ export default class MeetingsPage extends React.Component {
   render() {
 
     return (
-      <div style={{ background: "white" ,padding:'25px 13%'}} >
-        <div>
+      <div style={{ background: "white" ,padding:'25px 13% 0 13%'}} >
         <MeetingSearch />
-        </div>
-        <div>
-        <MeetingCardField Cards={[{id:1},{id:2}]}/>
+      <div>
+        <MeetingCardField Cards={[{id:1},{id:2},{id:3},{id:4}]}/>
 
         </div>
       </div>
