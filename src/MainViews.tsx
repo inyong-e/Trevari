@@ -4,7 +4,7 @@ import MeetingsPage from "./pages/MeetingsPage";
 import MainTop from './components/Common/MainTop';
 import MainFooter from './components/Common/MainFooter';
 import { Layout } from "antd";
-import styled, {keyframes, css} from 'styled-components';
+import styled, {css} from 'styled-components';
 import "antd/dist/antd.css";
 
 interface State{
@@ -36,18 +36,20 @@ class MainViews extends React.Component<{},State>{
 
   render() {
     return (
-      <Layout>
-    <Header show={this.state.tabShow}>
-      <MainTop categoryList={["트레바리 알아보기", "멤버십 신청", "독서모임", "이벤트","채용공고", "로그인" ]} />
-    </Header>
-    <Content style={{paddingTop:'64px'}}>
-      <BrowserRouter>
-        <Route exact path="/meetings" component={MeetingsPage} />
-        <Route exact path="/events" component={MeetingsPage} />
-      </BrowserRouter>
-    </Content>
-    <Footer><MainFooter /></Footer>
-  </Layout>
+    <Layout>
+      <Header show={this.state.tabShow}>
+        <MainTop categoryList={["트레바리 알아보기", "멤버십 신청", "독서모임", "이벤트","채용공고", "로그인" ]} />
+      </Header>
+      <Content style={{paddingTop:'64px'}}>
+        <BrowserRouter>
+          <Route exact path="/meetings" component={MeetingsPage} />
+          <Route exact path="/events" component={MeetingsPage} />
+        </BrowserRouter>
+      </Content>
+      <Footer>
+        <MainFooter />
+      </Footer>
+    </Layout>
     );
   }
 }
@@ -65,13 +67,5 @@ const Header = styled.div`
     return props.show ? css `margin-top:0;` : css `margin-top:-100px`
   }}
 `;
-
-const showAnimation = keyframes`
-  from{
-    padding-top: 20px
-  }to{
-    padding-top: 0px
-  }
-`
 
 export default MainViews;

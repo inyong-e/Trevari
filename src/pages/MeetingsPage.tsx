@@ -2,6 +2,7 @@ import * as React from "react";
 import {MeetingSearch} from '../components/Meeting/MeetingSearch';
 import {MeetingCardField} from '../components/Meeting/MeetingCardField';
 import {CardDesc} from '../store/common';
+import styled from 'styled-components';
 
 
 interface State {
@@ -9,17 +10,19 @@ interface State {
   Cards:CardDesc[]
 }
 export default class MeetingsPage extends React.Component<State> {
+
   RealTimeOut: ReturnType<typeof setTimeout>;
   constructor(props){
     super(props);
     this.RealTimeOut = null;
   }
+
   state:State = {
     Keyword:'',
     Cards:[]
   }
-  componentDidMount(){
 
+  componentDidMount(){
     // 서버에서 데이터를 요청하여 가져오는 부분
     const Cards:CardDesc[] = [
       {id:1,title:'이동진의 부메랑 인터뷰 그 영화의 비밀, 여자는 남자의 미래다, 옥희의 영화', hostGroup:'북씨-블랙', address:'강남 아지트', imageSrc:'../../resource/pic4.png', Date:'2019년 07월 15일 월요일 오후 07시 40분',hostName:'그룹장 워니님'},
@@ -31,10 +34,10 @@ export default class MeetingsPage extends React.Component<State> {
     ];
     this.setState({Cards})
   }
+  
   setKeyword = (Keyword) => {
     const bind = this;
-    if(this.RealTimeOut) 
-      clearTimeout(this.RealTimeOut);
+    if(this.RealTimeOut) clearTimeout(this.RealTimeOut);
 
     this.RealTimeOut = setTimeout(()=>{
       bind.setState({Keyword});
@@ -43,12 +46,20 @@ export default class MeetingsPage extends React.Component<State> {
   }
   render() {
     return (
-      <div style={{ background: "white"}} >
-        <MeetingSearch setKeyword={this.setKeyword}/>
-        <div style={{padding:'0 6%'}}>
-          <MeetingCardField Cards={this.state.Cards} Keyword={this.state.Keyword}/>
-        </div>
-      </div>
+      <SearchSpace>
+        <MeetingSearch setKeyword={this.setKeyword} />
+        <CardFiledSpace>
+          <MeetingCardField Cards={this.state.Cards} Keyword={this.state.Keyword} />
+        </CardFiledSpace>
+      </SearchSpace>
     );
   }
 }
+
+const SearchSpace = styled.div`
+  background: white;
+`
+const CardFiledSpace = styled.div`
+  padding: 0 6%;
+`
+
