@@ -8,7 +8,7 @@ interface Props{
 }
 
 const Description:React.SFC<Props> = ({categorys, selectCate, selectCategory}) => (
-  <div style={{textAlign:'center', margin:'0 25%'}}>
+  <WrapperDesc>
     <h2>FAQ</h2>
     <br/><br/>
     <h3> 
@@ -16,23 +16,31 @@ const Description:React.SFC<Props> = ({categorys, selectCate, selectCategory}) =
       성함/휴대전화번호/클럽명을 함께 알려주시면 더 빠르게 확인 가능합니다!
     </h3>
     <br/><br/>
-    <div style={{display:'flex'}}>
+    <div style={{display:'flex', flexWrap:'wrap', justifyContent: "space-around"}}>
         {categorys.map(category=>(
           <CateButton selected={selectCate === category} onClick={()=>selectCategory(category)}>
             {category}
           </CateButton>
         ))}
     </div>
-</div>
+</WrapperDesc>
 )
 
 export default Description;
 
+const WrapperDesc = styled.div`
+  text-align: center;
+  margin: 0 25%;
+  
+  @media (max-width:800px){
+    margin: 0 5%;
+  }
+`
+
 const CateButton = styled.div`
   border: 1px solid #ff8906;
   margin: 5px;
-  padding: 5px;
-  flex: 1;
+  padding: 10px;
   border-radius: 0.4rem;
   cursor: pointer
   ${props => {
@@ -40,4 +48,5 @@ const CateButton = styled.div`
     `background-color:#ff8906; color: white;`:
     `background-color:white; color: #ff8906`
   }}
+  flex: "1 0 30%"
 `

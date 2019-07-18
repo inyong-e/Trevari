@@ -74,4 +74,7 @@ const AnswerDesc = styled.div`
     css `display: block` :
     css `display: none`
   }}
+  @media (max-width:800px){
+    padding: 15px 0 40px 20px;
+  }
 `

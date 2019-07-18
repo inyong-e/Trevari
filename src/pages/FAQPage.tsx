@@ -19,7 +19,6 @@ class FAQPage extends React.Component{
     this.setState({selectCate});
   }
   render(){
-    console.log(this.state.selectCate);
     const {selectCate, QueData} = this.state;
     return(
       <WrapperFAQ>
@@ -39,6 +38,10 @@ const WrapperFAQ = styled.div`
   margin: 20px 10%;
   padding: 5% 0;
   background: white;
+
+  @media (max-width:800px){
+    margin: 20px 0;
+  }
 `
 const Bold = styled.div`
   margin-top: 20px;
