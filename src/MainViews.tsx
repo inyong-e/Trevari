@@ -6,6 +6,7 @@ import MainFooter from './components/Common/MainFooter';
 import { Layout } from "antd";
 import styled, {css} from 'styled-components';
 import "antd/dist/antd.css";
+import FAQPage from "./pages/FAQPage";
 
 interface State{
   scrollPic: number;
@@ -43,7 +44,7 @@ class MainViews extends React.Component<{},State>{
       <Content style={{paddingTop:'64px'}}>
         <BrowserRouter>
           <Route exact path="/meetings" component={MeetingsPage} />
-          <Route exact path="/events" component={MeetingsPage} />
+          <Route exact path="/cs" component={FAQPage} />
         </BrowserRouter>
       </Content>
       <Footer>

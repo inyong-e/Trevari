@@ -7,3 +7,9 @@ export interface CardDesc{
   imageSrc:string;
   Date: string;
 }
+
+export interface Question{
+  Category: string;
+  Question: string;
+  Answer: string;
+}
