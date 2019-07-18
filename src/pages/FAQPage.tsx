@@ -2,11 +2,11 @@ import * as React from 'react';
 import styled from 'styled-components';
 import Description from '../components/FAQ/Description';
 import QuestionField from '../components/FAQ/QuestionField';
-import {Question} from '../store/common';
+import {QueData} from '../interface/common';
 
 interface State {
   selectCate:string;
-  QueData : Question[];
+  QueData : QueData[];
 }
 
 export default class FAQPage extends React.Component{
@@ -16,7 +16,7 @@ export default class FAQPage extends React.Component{
     QueData:[
       {Category:'북클럽',Question:'트레바리는 젊은 사람들만 가는 곳이라고 하던데 맞나요?',Answer:`나이의 많고 적음과 무관하게 '더 좋은 사람이 되고 싶고 다양한 생각에 열려 있다'면 누구나 오셔도 됩니다😘`},
       {Category:'북클럽',Question:'파트너는 어떤 역할을 하나요?',Answer:`트레바리의 모든 불클럽에는 '파트너'가 한 분씩 계십니다. 트레바리의 '크루'(직원)와는 달리 생계(?)는 다른 곳에서 해결하시지만, 트레바리와 같은 곳을 바라봐 주시는 든든한 분들이랍니다! 한 시즌 동안 아래의 업무를 담당해주시며 멤버분들이 트레바리를 더욱 잘 즐길 수 있도록 도와주실 거예요.`},
-      {Category:'북클럽',Question:'밈버 구성은 어떻게 되나요?',Answer:`정말 다양한 직업과 연령대의 멤버분들이 활동하고 계세요! 나와 다른 배경을 가진 멤버들의 다양한 이야기를 듣는 즐거움이 있습니다!`},
+      {Category:'북클럽',Question:'멤버 구성은 어떻게 되나요?',Answer:`정말 다양한 직업과 연령대의 멤버분들이 활동하고 계세요! 나와 다른 배경을 가진 멤버들의 다양한 이야기를 듣는 즐거움이 있습니다!`},
       {Category:'북클럽',Question:'클럽장은 어떤 역할을 하나요?',Answer:`전문적으로 이끌어주시는 분이 계시면 더 좋을 클럽에는 '클럽장'을 모시고 있어요. 주로 과학관장님, 교수님, 작가님, 특정 기업 대표님 등 해당 분야 전문가분들을 모십니다.
       이렇게 모신 ‘클럽장’님들은 해당 클럽의 커리큘럼을 직접 짜주십니다. 같이 읽으면 좋을 책, 아티클, 영상/이미지 자료를 추천해주실 뿐만 아니라, 클럽 어떤 식으로 운영되면 좋을지까지 같이 고민해주신답니다. 
       나아가 모임 당일 양질의 대화가 이뤄질 수 있도록 토론 주제를 준비하고, 대화를 이끌어가주시고 계세요. :)`},
@@ -40,11 +40,12 @@ export default class FAQPage extends React.Component{
     this.setState({selectCate});
   }
   render(){
+    console.log(this.state.selectCate)
     return(
       <WrapperFAQ>
-        <Description categorys={['북클럽','신청/환불','독후감','놀러가기','이벤트','아지트']}/>
+        <Description categorys={['북클럽','신청/환불','독후감','놀러가기','이벤트','아지트']} selectCategory={this.selectCategory}/>
         <br/><br/>
-        <QuestionField />
+        <QuestionField QueData={this.state.QueData}/>
       </WrapperFAQ>
     )
   }

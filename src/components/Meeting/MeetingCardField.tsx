@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {CardDesc} from '../../store/common';
+import {CardDesc} from '../../interface/common';
 import {MeetingCard} from './MeetingCard';
 import styled from 'styled-components';
 

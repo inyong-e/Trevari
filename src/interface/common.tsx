@@ -8,7 +8,7 @@ export interface CardDesc{
   Date: string;
 }
 
-export interface Question{
+export interface QueData{
   Category: string;
   Question: string;
   Answer: string;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import {MeetingSearch} from '../components/Meeting/MeetingSearch';
 import {MeetingCardField} from '../components/Meeting/MeetingCardField';
-import {CardDesc} from '../store/common';
+import {CardDesc} from '../interface/common';
 import styled from 'styled-components';
 
 

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import  {CardDesc} from '../../store/common';
+import  {CardDesc} from '../../interface/common';
 import {Card} from 'antd';
 import styled,{css} from 'styled-components';
 
