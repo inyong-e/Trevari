@@ -1,13 +1,15 @@
 import * as React from 'react';
+import styled,{css} from 'styled-components';
 
 interface Props{
   categorys:string[];
+  selectCate:string;
   selectCategory(selectCate:string):void;
 }
 
-const Description:React.SFC<Props> = ({categorys, selectCategory}) => (
+const Description:React.SFC<Props> = ({categorys, selectCate, selectCategory}) => (
   <div style={{textAlign:'center', margin:'0 25%'}}>
-    <h2 style ={{paddingTop:'40px'}}>FAQ</h2>
+    <h2>FAQ</h2>
     <br/><br/>
     <h3> 
       더 궁금하신 사항은 트레바리 고객센터(<a>contact@trevari.co.kr</a>)로 문의주세요 :)<br/>
@@ -16,12 +18,26 @@ const Description:React.SFC<Props> = ({categorys, selectCategory}) => (
     <br/><br/>
     <div style={{display:'flex'}}>
         {categorys.map(category=>(
-          <button onClick={()=>selectCategory(category)} style={{border:'1px solid #ff8906', margin:'5px',padding:'5px', flex:1, borderRadius:'0.4rem',color:'#ff8906'}}>
+          <CateButton selected={selectCate === category} onClick={()=>selectCategory(category)}>
             {category}
-          </button>
+          </CateButton>
         ))}
     </div>
 </div>
 )
 
 export default Description;
+
+const CateButton = styled.div`
+  border: 1px solid #ff8906;
+  margin: 5px;
+  padding: 5px;
+  flex: 1;
+  border-radius: 0.4rem;
+  cursor: pointer
+  ${props => {
+    return props.selected ? 
+    `background-color:#ff8906; color: white;`:
+    `background-color:white; color: #ff8906`
+  }}
+`

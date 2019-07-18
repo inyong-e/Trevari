@@ -40,12 +40,13 @@ export default class FAQPage extends React.Component{
     this.setState({selectCate});
   }
   render(){
-    console.log(this.state.selectCate)
+    console.log(this.state.selectCate);
+    const {selectCate, QueData} = this.state;
     return(
       <WrapperFAQ>
-        <Description categorys={['북클럽','신청/환불','독후감','놀러가기','이벤트','아지트']} selectCategory={this.selectCategory}/>
+        <Description categorys={['북클럽','신청/환불','독후감','놀러가기','이벤트','아지트']} selectCategory={this.selectCategory} selectCate={selectCate}/>
         <br/><br/>
-        <QuestionField QueData={this.state.QueData}/>
+        <QuestionField QueData={QueData} selectCate={selectCate}/>
       </WrapperFAQ>
     )
   }
@@ -53,5 +54,6 @@ export default class FAQPage extends React.Component{
 
 const WrapperFAQ = styled.div`
   margin: 20px 10%;
+  padding: 5% 0;
   background: white;
 `

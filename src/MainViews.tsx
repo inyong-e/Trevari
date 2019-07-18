@@ -62,7 +62,6 @@ const Header = styled.div`
   z-index: 1;
   width: 100%;
   padding: 20px 10%;
-  margin-top: 0
   transition:all 0.5s ease .1s
   ${props => {
     return props.show ? css `margin-top:0;` : css `margin-top:-100px`
