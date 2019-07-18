@@ -29,7 +29,7 @@ class Question extends React.Component<Props,State>{
          <QueDesc isAnswer={isAnswer}>{Question}</QueDesc>
        </QueWrapper>
        <AnswerDesc isAnswer={isAnswer}>
-         <span>{Answer}</span>
+         <span><Answer /></span>
        </AnswerDesc>
      </div>
    ) 

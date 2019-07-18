@@ -43,7 +43,7 @@ class MainViews extends React.Component<{},State>{
       </Header>
       <Content style={{paddingTop:'64px'}}>
         <BrowserRouter>
-          <Route exact path="/meetings" component={MeetingsPage} />
+          <Route exact path="/" component={MeetingsPage} />
           <Route exact path="/cs" component={FAQPage} />
         </BrowserRouter>
       </Content>

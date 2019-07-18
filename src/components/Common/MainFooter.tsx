@@ -5,7 +5,9 @@ export default () => (
   <div style={{margin:'0 10%'}}>
     <div style={{display:'flex', width:'100%'}}>
       <h2 >세상을 더 지적으로 사람들을 더 친하게 📚</h2> 
-      <div style={{textAlign:'right', width:'50%'}}><Button style={{borderColor:'#ff8906', color:'#ff8906'}}>자주 묻는 질문 & 공지사항</Button></div>
+      <div style={{textAlign:'right', width:'50%'}}>
+        <Button style={{borderColor:'#ff8906', color:'#ff8906'}} href='./cs'>자주 묻는 질문 & 공지사항</Button>
+      </div>
     </div>
     <h4><br/>블로그<br/><br/>채용공고<br/><br/>이용약관<br/><br/>개인정보처리방침</h4>
     <br/>

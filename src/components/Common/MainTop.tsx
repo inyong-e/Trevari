@@ -31,6 +31,9 @@ const WrapperCategory = styled.div`
   float: left;
   color: rgb(130,130,130);
   cursor: pointer;
+  &:hover {
+    color: #ff8906;
+  }
 `
 const WrapperCategorys = styled.div`
   float: right;

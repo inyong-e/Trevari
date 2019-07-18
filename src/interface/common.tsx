@@ -11,5 +11,5 @@ export interface CardDesc{
 export interface QueData{
   Category: string;
   Question: string;
-  Answer: string;
+  Answer():JSX.Element;
 }
