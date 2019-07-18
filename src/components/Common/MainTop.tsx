@@ -15,7 +15,7 @@ const MainTop: React.SFC<Props> = ({ categoryList }) => {
   
   return (
     <div>
-      <ImageNav src={ImageSrc} />
+      <a href='./'><ImageNav src={ImageSrc}/></a>
       <WrapperCategorys>{categorys}</WrapperCategorys>
     </div>
     

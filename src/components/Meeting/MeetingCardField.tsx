@@ -35,6 +35,9 @@ const WrapperCard = styled.div`
   display: inline-block;
   vertical-align: top;
   width: 33.3%
+  @media (max-width:800px){
+    width: 100%;
+  }
 `
 
 const EmptySpace = styled.div`

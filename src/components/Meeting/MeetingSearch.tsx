@@ -11,7 +11,7 @@ export const MeetingSearch:React.SFC<Props> = ({setKeyword}) => (
       <p>내 일정에 맞는 놀러가기 클럽을 찾으신다면?</p>
         <CalenderButton>독서모임 캘린더 바로가기</CalenderButton>
         <InputSpace>
-          <Input size="large" placeholder="클럽명을 입력하세요" style={{width:'300px'}} onChange={e=>setKeyword(e.target.value)}/>
+          <Input size="large" placeholder="클럽명을 입력하세요" style={{width:'100%'}} onChange={e=>setKeyword(e.target.value)}/>
         </InputSpace>
     </Wrapper>
 )
@@ -31,7 +31,15 @@ const CalenderButton = styled.div`
   border-radius: 3px;
   font-size: 1rem;
   float: left;
+  @media (max-width:800px){
+    width: 100%;
+    margin-bottom:25px;
+  }
 `
 const InputSpace = styled.div`
   float : right;
+  width:300px;
+  @media (max-width:800px){
+    width: 100%;
+  }
 `
