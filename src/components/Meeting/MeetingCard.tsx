@@ -1,6 +1,5 @@
 import * as React from 'react';
 import  {CardDesc} from '../../interface/common';
-import {Card} from 'antd';
 import styled,{css} from 'styled-components';
 
 interface Props{
@@ -8,7 +7,7 @@ interface Props{
 }
 
 export const MeetingCard:React.SFC<Props> = ({CardDesc}) => (
-  <Card style={{margin:'20px 10px', height:'400px', cursor:'pointer'}}>
+  <div style={{margin:'20px 10px', height:'400px', cursor:'pointer'}}>
     <WrapperImage>
     <HostName>{CardDesc.hostName}</HostName>
       <Image src={CardDesc.imageSrc}/>
@@ -19,7 +18,7 @@ export const MeetingCard:React.SFC<Props> = ({CardDesc}) => (
       <Description Color>{CardDesc.title}</Description>
       <div>{CardDesc.address}<br />{CardDesc.Date}</div>
     </div>
-  </Card>
+  </div>
 )
 
 const WrapperImage = styled.div`

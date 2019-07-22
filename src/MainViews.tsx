@@ -3,7 +3,6 @@ import { BrowserRouter, Route } from "react-router-dom";
 import MeetingsPage from "./pages/MeetingsPage";
 import MainTop from './components/Common/MainTop';
 import MainFooter from './components/Common/MainFooter';
-import { Layout } from "antd";
 import styled, {css} from 'styled-components';
 import "antd/dist/antd.css";
 import FAQPage from "./pages/FAQPage";
@@ -13,7 +12,6 @@ interface State{
   tabShow:boolean;
 
 }
-const { Footer, Content } = Layout;
 class MainViews extends React.Component<{},State>{
   state:State={
     scrollPic:1,
@@ -37,7 +35,7 @@ class MainViews extends React.Component<{},State>{
 
   render() {
     return (
-    <Layout>
+    <div>
       <Header show={this.state.tabShow}>
         <MainTop categoryList={["트레바리 알아보기", "멤버십 신청", "독서모임", "이벤트","채용공고", "로그인" ]} />
       </Header>
@@ -50,7 +48,7 @@ class MainViews extends React.Component<{},State>{
       <Footer>
         <MainFooter />
       </Footer>
-    </Layout>
+    </div>
     );
   }
 }
@@ -67,5 +65,15 @@ const Header = styled.div`
     return props.show ? css `margin-top:0;` : css `margin-top:-100px`
   }}
 `;
+
+const Content = styled.div`
+  padding-top: 64px;
+`
+
+const Footer = styled.div`
+  padding: 24px 50px;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+`
 
 export default MainViews;

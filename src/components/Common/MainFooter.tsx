@@ -1,13 +1,12 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import {Button} from 'antd';
 
 export default () => (
   <Wrapper>
     <Subwrapper>
       <Title>세상을 더 지적으로 사람들을 더 친하게 📚</Title> 
       <WrapButton>
-        <Button style={{borderColor:'#ff8906', color:'#ff8906'}} href='./cs'>자주 묻는 질문 & 공지사항</Button>
+        <a href='/cs'><Button style={{borderColor:'#ff8906', color:'#ff8906'}}>자주 묻는 질문 & 공지사항</Button></a>
       </WrapButton>
     </Subwrapper>
     <h4><br/>블로그<br/><br/>채용공고<br/><br/>이용약관<br/><br/>개인정보처리방침</h4>
@@ -40,6 +39,13 @@ const WrapButton = styled.div`
     width:0%;
     text-align:left;
   }
+`
+const Button = styled.button`
+  border-color: #ff8906;
+  border-radius: 0.3rem;
+  color: #ff8906;
+  padding:10px;
+
 `
 
 const Title = styled.span`
