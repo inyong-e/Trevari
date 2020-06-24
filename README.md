@@ -2,7 +2,7 @@
 
 이 프로젝트는 트레바리 과제입니다.
 
-[메인 사진]
+![image](https://user-images.githubusercontent.com/13481627/85589722-c1b1a200-b67e-11ea-8940-6bd5fbc8e9c2.png)
 
 ## 기술 스택
 
@@ -103,3 +103,6 @@ Cards: [
 
 - 각 질문 보여주기 기능
   - 질문 리스트의 질문 클릭 시, 해당 질문의 답변이 나타나고 숨겨지는 방식으로 구현.
+  
+### 진행 문서
+https://www.notion.so/helloinyong/TREVARI-e40d87a47f9149fc91605e6cab6f7151
