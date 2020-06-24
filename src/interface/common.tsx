@@ -1,15 +1,15 @@
-export interface CardDesc{
-  id:number;
-  title:string;
-  hostGroup:string
-  hostName:string;
+export interface CardDesc {
+  id: number;
+  title: string;
+  hostGroup: string;
+  hostName: string;
   address: string;
-  imageSrc:string;
+  imageSrc: string;
   Date: string;
 }
 
-export interface QueData{
+export interface QueData {
   Category: string;
   Question: string;
-  Answer():JSX.Element;
+  Answer(): JSX.Element;
 }
